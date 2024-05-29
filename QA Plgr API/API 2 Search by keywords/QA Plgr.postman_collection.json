@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "e9dc2eff-aa5a-4583-ad72-5fcea3c361e2",
+		"name": "QA Plgr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28095965",
+		"_collection_link": "https://www.postman.com/science-cosmonaut-75965667/workspace/qa-plgr-api-test/collection/28095965-e9dc2eff-aa5a-4583-ad72-5fcea3c361e2?action=share&source=collection_link&creator=28095965"
+	},
+	"item": [
+		{
+			"name": "API 2 search by keywords",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take list of games",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search \"Baldur's\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games/search?query=Baldur's",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Baldur's"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take list of games FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search \"Baldur's\" FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games/search?query=Baldur's",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Baldur's"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]	
+}
+		
