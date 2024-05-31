@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "e9dc2eff-aa5a-4583-ad72-5fcea3c361e2",
+		"name": "QA Plgr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28095965",
+		"_collection_link": "https://www.postman.com/science-cosmonaut-75965667/workspace/qa-plgr-api-test/collection/28095965-e9dc2eff-aa5a-4583-ad72-5fcea3c361e2?action=share&source=collection_link&creator=28095965"
+	},
+	"item": [
+		{
+			
+			"name": "API 4 update with occupied data",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"alex@gmail.com\",\r\n\"nickname\": \"alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/:uuid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "6a4bce2a-fee7-47d8-855c-84606e95820d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updated user check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/:uuid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "6a4bce2a-fee7-47d8-855c-84606e95820d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"alex@gmail.com\",\r\n\"nickname\": \"alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/:uuid",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "b751b688-6a2a-44c6-a535-fec665f81792"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]	
+}
