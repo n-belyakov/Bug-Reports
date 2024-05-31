@@ -1,0 +1,1416 @@
+{
+	"info": {
+		"_postman_id": "e9dc2eff-aa5a-4583-ad72-5fcea3c361e2",
+		"name": "QA Plgr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28095965",
+		"_collection_link": "https://www.postman.com/science-cosmonaut-75965667/workspace/qa-plgr-api-test/collection/28095965-e9dc2eff-aa5a-4583-ad72-5fcea3c361e2?action=share&source=collection_link&creator=28095965"
+	},
+	"item": [
+		{
+			"name": "API 1 delete user",
+			"item": [
+				{
+					"name": "GET test 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET test 1 FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET test 1 FIXED Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/:uuid",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "d6098dd7-f60d-4495-9571-e9081df02a13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE user test 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/:uuid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "d6098dd7-f60d-4495-9571-e9081df02a13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE user test 1 FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/:uuid",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "d6098dd7-f60d-4495-9571-e9081df02a13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API 2 search by keywords",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take list of games",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search \"Baldur's\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games/search?query=Baldur's",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Baldur's"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take list of games FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search \"Baldur's\" FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-2"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games/search?query=Baldur's",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Baldur's"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API 3 create new user",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New acc reg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"d2.utime@yandex.ru\",\r\n    \"password\": \"veryhardpass\",\r\n    \"name\": \"Nik\",\r\n    \"nickname\": \"Nik\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New acc reg check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Env setup FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New acc reg FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"d2.utime@yandex.ru\",\r\n    \"password\": \"veryhardpass\",\r\n    \"name\": \"Nik\",\r\n    \"nickname\": \"Nik\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New acc reg check FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New acc uuid check FIXED CHECK",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/:uuid",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "e8bb596f-3289-4440-98c6-3e5c0c00db0c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API 4 update with occupied data",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"alex@gmail.com\",\r\n\"nickname\": \"alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/:uuid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "6a4bce2a-fee7-47d8-855c-84606e95820d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updated user check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-3"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/:uuid",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "6a4bce2a-fee7-47d8-855c-84606e95820d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user info FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"alex@gmail.com\",\r\n\"nickname\": \"alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/:uuid",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								":uuid"
+							],
+							"variable": [
+								{
+									"key": "uuid",
+									"value": "b751b688-6a2a-44c6-a535-fec665f81792"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API 5 wish list",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull games list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add game to wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"3779ba46-8ca8-433b-8b86-1b4384dc8554",
+								"wishlist",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull user's wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"3779ba46-8ca8-433b-8b86-1b4384dc8554",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull games list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add game to wishlist FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/345e1c42-1a4d-4941-8e58-532d1e7470be/wishlist/add",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"345e1c42-1a4d-4941-8e58-532d1e7470be",
+								"wishlist",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull user's wishlist FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/345e1c42-1a4d-4941-8e58-532d1e7470be/wishlist",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"345e1c42-1a4d-4941-8e58-532d1e7470be",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
