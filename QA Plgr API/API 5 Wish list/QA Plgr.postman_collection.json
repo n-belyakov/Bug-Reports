@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "e9dc2eff-aa5a-4583-ad72-5fcea3c361e2",
+		"name": "QA Plgr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28095965",
+		"_collection_link": "https://www.postman.com/science-cosmonaut-75965667/workspace/qa-plgr-api-test/collection/28095965-e9dc2eff-aa5a-4583-ad72-5fcea3c361e2?action=share&source=collection_link&creator=28095965"
+	},
+	"item": [
+		{
+			
+			"name": "API 5 wish list",
+			"item": [
+				{
+					"name": "Env setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/setup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull games list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add game to wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"3779ba46-8ca8-433b-8b86-1b4384dc8554",
+								"wishlist",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull user's wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"3779ba46-8ca8-433b-8b86-1b4384dc8554",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull users list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull games list FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/games",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add game to wishlist FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/345e1c42-1a4d-4941-8e58-532d1e7470be/wishlist/add",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"345e1c42-1a4d-4941-8e58-532d1e7470be",
+								"wishlist",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pull user's wishlist FIXED",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "X-Task-Id",
+								"value": "API-5"
+							}
+						],
+						"url": {
+							"raw": "https://release-gs.qa-playground.com/api/v1/users/345e1c42-1a4d-4941-8e58-532d1e7470be/wishlist",
+							"protocol": "https",
+							"host": [
+								"release-gs",
+								"qa-playground",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"345e1c42-1a4d-4941-8e58-532d1e7470be",
+								"wishlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
