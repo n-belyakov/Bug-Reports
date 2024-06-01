@@ -15,7 +15,7 @@
 "X-Task-Id": "API-4"
 ```
 
-1. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
+2. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/setup
 
@@ -25,10 +25,10 @@
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users
 
-1. Использовать данные двух пользователей, у первого взять “email” или ”nickname”, у второго “uuid”
+2. Использовать данные двух пользователей, у первого взять “email” или ”nickname”, у второго “uuid”
 - **Пользователь 1:** email: "alex@gmail.com"
 - **Пользователь 2:** uuid: "6a4bce2a-fee7-47d8-855c-84606e95820d"
-1. Сформировать тело запроса с данными **Пользователя 2** из предыдущего шага
+3. Сформировать тело запроса с данными **Пользователя 2** из предыдущего шага
 
 ```json
 {
@@ -36,7 +36,7 @@
 }
 ```
 
-1. Отправить PATH-запрос на эндпоинт /users, c указанным path-параметром {uuid} и телом запроса из шага 3
+4. Отправить PATH-запрос на эндпоинт /users, c указанным path-параметром {uuid} и телом запроса из шага 3
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users/6a4bce2a-fee7-47d8-855c-84606e95820d
 
