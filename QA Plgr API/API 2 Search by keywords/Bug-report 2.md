@@ -17,7 +17,7 @@ GET /games/search возвращает все игры, а не только т�
 "X-Task-Id": "API-2"
 ```
 
-1. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса вашей тестовой среды
+2. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса вашей тестовой среды
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/setup
 
@@ -27,12 +27,12 @@ GET /games/search возвращает все игры, а не только т�
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/games
 
-1. Выбрать часть названия игры “Baldur's”
-2. Отправить GET-запрос для поиска игры, содержащей “Baldur's” в названии
+2. Выбрать часть названия игры “Baldur's”
+3. Отправить GET-запрос для поиска игры, содержащей “Baldur's” в названии
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/games/search?query=Baldur's
 
-1. Проверить, что возвращается **статус-код ответа** - **200**
+4. Проверить, что возвращается **статус-код ответа** - **200**
 
 ### Ожидаемый результат
 
