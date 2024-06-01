@@ -15,16 +15,16 @@
 "X-Task-Id": "API-1"
 ```
 
-1. Отправить **POST** запрос на эндпоинт ”setup”
+2. Отправить **POST** запрос на эндпоинт ”setup”
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/setup
 
-1. Отправить GET запрос на эндпоинт /users для получения списка пользователей
+3. Отправить GET запрос на эндпоинт /users для получения списка пользователей
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users
 
-1. Выбрать пользователя с uuid равным "d6098dd7-f60d-4495-9571-e9081df02a13”
-2. Отправить DELETE запрос на эндпоинт 
+4. Выбрать пользователя с uuid равным "d6098dd7-f60d-4495-9571-e9081df02a13”
+5. Отправить DELETE запрос на эндпоинт 
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users/d6098dd7-f60d-4495-9571-e9081df02a1
 
