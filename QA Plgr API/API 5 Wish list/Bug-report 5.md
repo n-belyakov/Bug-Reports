@@ -15,7 +15,7 @@
 "X-Task-Id": "API-5"
 ```
 
-1. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
+2. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/setup 
 
@@ -25,13 +25,13 @@
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users 
 
-1. Выбрать пользователя с “uuid” равным 3779ba46-8ca8-433b-8b86-1b4384dc8554 .
-2. Получить список всех игр с помощью GET-запроса
+2. Выбрать пользователя с “uuid” равным 3779ba46-8ca8-433b-8b86-1b4384dc8554 .
+3. Получить список всех игр с помощью GET-запроса
 
 [https://dev-gs.qa-playground.com/api/v1/games](https://dev-gs.qa-playground.com/api/v1/games) 
 
-1. Выбрать игру с “uuid” равным 06520f6e-5096-4d49-a044-136357737eff 
-2. Сформировать тело запроса для добавления игры в список желаний
+4. Выбрать игру с “uuid” равным 06520f6e-5096-4d49-a044-136357737eff 
+5. Сформировать тело запроса для добавления игры в список желаний
 
 ```
 {
@@ -39,11 +39,11 @@
 }
 ```
 
-1. Отправить POST-запрос на добавление игры выбранного пользователя. С телом запроса из шага 5
+6. Отправить POST-запрос на добавление игры выбранного пользователя. С телом запроса из шага 5
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist/add 
 
-1. Проверить список желаний пользователя с помощью GET-запроса
+7. Проверить список желаний пользователя с помощью GET-запроса
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users/3779ba46-8ca8-433b-8b86-1b4384dc8554/wishlist
 
