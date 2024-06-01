@@ -15,7 +15,7 @@
 "X-Task-Id": "API-3"
 ```
 
-1. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
+2. Отправить **POST** запрос на эндпоинт **`/setup`** для сброса тестовой среды
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/setup
 
@@ -32,7 +32,7 @@
 }
 ```
 
-1. Отправить POST-запрос на эндпоинт /users с телом запроса
+2. Отправить POST-запрос на эндпоинт /users с телом запроса
 
 [https://dev-gs.qa-playground.com/api/v1](https://dev-gs.qa-playground.com/api/v1)/users
 
