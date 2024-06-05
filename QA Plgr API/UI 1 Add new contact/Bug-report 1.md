@@ -20,7 +20,7 @@
 - Title - Ttitle
 - Email - d2.utime@yandex.ru
 - Account manager: выбрать Jane Doe
-1. Нажать кнопку “Save”
+4. Нажать кнопку “Save”
 
 ### Ожидаемый результат
 
